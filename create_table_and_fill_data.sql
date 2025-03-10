@@ -1,0 +1,22 @@
+CREATE SCHEMA MY_APP;
+
+CREATE TABLE MY_APP.PERSONS
+(
+    NAME           TEXT,
+    SURNAME        TEXT,
+    AGE            INTEGER,
+    PHONE_NUMBER   TEXT,
+    CITY_OF_LIVING TEXT,
+
+    PRIMARY KEY (NAME, SURNAME, AGE)
+);
+
+INSERT INTO MY_APP.PERSONS
+    (NAME, SURNAME, AGE)
+VALUES ('Ivan', 'Petrov', 20),
+       ('Ivan', 'Popov', 23),
+       ('Anna', 'Boyko', 30);
+
+UPDATE MY_APP.PERSONS
+SET CITY_OF_LIVING = 'MOSCOW'
+WHERE NAME = 'Ivan';
